@@ -1,0 +1,4078 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Arena.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.example.model.game.arena;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.example.model.Position;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.example.model.game.entities.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.example.model.game.entities.powerups.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Random;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Arena {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    ////////////////////////////// Constructors //////////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public Arena(int width, int height) throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_16'>1</a>
+<span>
+1. &#60;init&#62; : Removed assignment to member variable width &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.width = width;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_17'/>
+17
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_17'>1</a>
+<span>
+1. &#60;init&#62; : Removed assignment to member variable height &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.height = height;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// ARENA SIZE ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final int width;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final int height;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getWidth() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_25'>1</a>
+<span>
+1. getWidth : replaced int return with 0 for org/example/model/game/arena/Arena::getWidth &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return width;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getHeight() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_28'/>
+28
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_28'>1</a>
+<span>
+1. getHeight : replaced int return with 0 for org/example/model/game/arena/Arena::getHeight &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return height;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// Bomberman ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Bomberman bomberman;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Bomberman getBomberman() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_36'>1</a>
+<span>
+1. getBomberman : replaced return value with null for org/example/model/game/arena/Arena::getBomberman &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return bomberman;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setBomberman(Bomberman bomberman) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_39'/>
+39
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_39'>1</a>
+<span>
+1. setBomberman : Removed assignment to member variable bomberman &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.bomberman = bomberman;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// Monsters ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_43'/>
+43
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_43'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable monsters &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;Monster&#62; monsters = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_44'>1</a>
+<span>
+1. getMonsters : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getMonsters &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public List&#60;Monster&#62; getMonsters() { return monsters; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setMonsters(List&#60;Monster&#62; monsters) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_46'>1</a>
+<span>
+1. setMonsters : Removed assignment to member variable monsters &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.monsters = monsters;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void addMonster(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_49'/>
+49
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_49'>2</a>
+<span>
+1. addMonster : removed call to org/example/model/game/entities/Monster::&#60;init&#62; &rarr; KILLED<br/>
+2. addMonster : removed call to java/util/List::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        monsters.add(new Monster(position));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// BREAKABLE WALLS ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_53'/>
+53
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_53'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable breakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;BreakableWall&#62; breakableWalls = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;BreakableWall&#62; getBreakableWalls() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_56'/>
+56
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_56'>1</a>
+<span>
+1. getBreakableWalls : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getBreakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return breakableWalls;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setBreakableWalls(List&#60;BreakableWall&#62; breakableWalls) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_59'/>
+59
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_59'>1</a>
+<span>
+1. setBreakableWalls : Removed assignment to member variable breakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.breakableWalls = breakableWalls;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// UNBREAKABLE WALLS ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_63'/>
+63
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_63'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable unbreakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;UnbreakableWall&#62; unbreakableWalls = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;UnbreakableWall&#62; getUnbreakableWalls() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_65'/>
+65
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_65'>1</a>
+<span>
+1. getUnbreakableWalls : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getUnbreakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return unbreakableWalls;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setUnbreakableWalls(List&#60;UnbreakableWall&#62; unbreakableWalls) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_68'/>
+68
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_68'>1</a>
+<span>
+1. setUnbreakableWalls : Removed assignment to member variable unbreakableWalls &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.unbreakableWalls = unbreakableWalls;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// BOMBS ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_72'/>
+72
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_72'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable bombs &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;Bomb&#62; bombs = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_73'/>
+73
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_73'>1</a>
+<span>
+1. getBombs : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getBombs &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public List&#60;Bomb&#62; getBombs() { return bombs; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void addBomb(Bomb bomb) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_76'/>
+76
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_76'>1</a>
+<span>
+1. addBomb : removed call to java/util/List::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.bombs.add(bomb);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// EXPLOSIONS ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_80'/>
+80
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_80'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable explosions &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;Explosion&#62; explosions = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;Explosion&#62; getExplosions() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_82'/>
+82
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_82'>1</a>
+<span>
+1. getExplosions : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getExplosions &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return explosions; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void addExplosion(Explosion explosion) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_84'/>
+84
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_84'>1</a>
+<span>
+1. addExplosion : removed call to java/util/List::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.explosions.add(explosion);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// &#34;COLISIONS&#34; ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isNotWall(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_90'>6</a>
+<span>
+1. isNotWall : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isNotWall : negated conditional &rarr; KILLED<br/>
+3. isNotWall : removed call to org/example/model/game/arena/Arena::isUWall &rarr; KILLED<br/>
+4. isNotWall : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+5. isNotWall : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+6. isNotWall : replaced boolean return with true for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (isUWall(position)) return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_92'/>
+92
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_92'>6</a>
+<span>
+1. isNotWall : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isNotWall : negated conditional &rarr; KILLED<br/>
+3. isNotWall : removed call to org/example/model/game/arena/Arena::isBWall &rarr; KILLED<br/>
+4. isNotWall : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+5. isNotWall : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+6. isNotWall : replaced boolean return with true for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (isBWall(position)) return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_93'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_94'/>
+94
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_94'>2</a>
+<span>
+1. isNotWall : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isNotWall : replaced boolean return with false for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_95'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_97'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isUWall(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_98'/>
+98
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_98'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (UnbreakableWall wall : unbreakableWalls){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_99'/>
+99
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_99'>5</a>
+<span>
+1. isUWall : removed conditional - replaced equality check with true &rarr; TIMED_OUT<br/>
+2. isUWall : negated conditional &rarr; KILLED<br/>
+3. isUWall : removed call to org/example/model/game/entities/UnbreakableWall::getPosition &rarr; KILLED<br/>
+4. isUWall : removed call to org/example/model/Position::equals &rarr; KILLED<br/>
+5. isUWall : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>            if (wall.getPosition().equals(position)){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_100'/>
+100
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_100'>2</a>
+<span>
+1. isUWall : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isUWall : replaced boolean return with false for org/example/model/game/arena/Arena::isUWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_102'/>
+102
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_102'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_103'/>
+103
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_103'>2</a>
+<span>
+1. isUWall : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isUWall : replaced boolean return with true for org/example/model/game/arena/Arena::isUWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isBWall(Position position) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_106'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (BreakableWall wall : breakableWalls)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_107'/>
+107
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_107'>5</a>
+<span>
+1. isBWall : negated conditional &rarr; KILLED<br/>
+2. isBWall : removed call to org/example/model/game/entities/BreakableWall::getPosition &rarr; KILLED<br/>
+3. isBWall : removed call to org/example/model/Position::equals &rarr; KILLED<br/>
+4. isBWall : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+5. isBWall : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (wall.getPosition().equals(position))</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_108'/>
+108
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_108'>2</a>
+<span>
+1. isBWall : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isBWall : replaced boolean return with false for org/example/model/game/arena/Arena::isBWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_109'/>
+109
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_109'>2</a>
+<span>
+1. isBWall : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isBWall : replaced boolean return with true for org/example/model/game/arena/Arena::isBWall &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_110'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_111'/>
+111
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_111'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isMonster(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_112'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (Monster monster : monsters)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_113'/>
+113
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_113'>5</a>
+<span>
+1. isMonster : negated conditional &rarr; KILLED<br/>
+2. isMonster : removed call to org/example/model/game/entities/Monster::getPosition &rarr; KILLED<br/>
+3. isMonster : removed call to org/example/model/Position::equals &rarr; KILLED<br/>
+4. isMonster : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+5. isMonster : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (monster.getPosition().equals(position))</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_114'/>
+114
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_114'>2</a>
+<span>
+1. isMonster : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isMonster : replaced boolean return with false for org/example/model/game/arena/Arena::isMonster &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_115'/>
+115
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_115'>2</a>
+<span>
+1. isMonster : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isMonster : replaced boolean return with true for org/example/model/game/arena/Arena::isMonster &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_117'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_118'/>
+118
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_118'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isBomb(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_119'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (Bomb bomb : bombs)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_120'/>
+120
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_120'>5</a>
+<span>
+1. isBomb : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+2. isBomb : negated conditional &rarr; KILLED<br/>
+3. isBomb : removed call to org/example/model/game/entities/Bomb::getPosition &rarr; KILLED<br/>
+4. isBomb : removed call to org/example/model/Position::equals &rarr; KILLED<br/>
+5. isBomb : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            if (bomb.getPosition().equals(position)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_121'/>
+121
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_121'>2</a>
+<span>
+1. isBomb : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isBomb : replaced boolean return with false for org/example/model/game/arena/Arena::isBomb &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_122'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_123'/>
+123
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_123'>2</a>
+<span>
+1. isBomb : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isBomb : replaced boolean return with true for org/example/model/game/arena/Arena::isBomb &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_124'/>
+124
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_124'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_125'/>
+125
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_125'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_126'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isExplosion(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_127'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (Explosion explosion : explosions)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_128'/>
+128
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_128'>7</a>
+<span>
+1. isExplosion : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+2. isExplosion : Substituted 1 with 0 &rarr; KILLED<br/>
+3. isExplosion : negated conditional &rarr; KILLED<br/>
+4. isExplosion : removed call to org/example/model/game/entities/Explosion::getPosition &rarr; KILLED<br/>
+5. isExplosion : removed call to org/example/model/Position::equals &rarr; KILLED<br/>
+6. isExplosion : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+7. isExplosion : replaced boolean return with false for org/example/model/game/arena/Arena::isExplosion &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            if (explosion.getPosition().equals(position)) { return true; }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_129'/>
+129
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_129'>2</a>
+<span>
+1. isExplosion : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isExplosion : replaced boolean return with true for org/example/model/game/arena/Arena::isExplosion &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_130'/>
+130
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_130'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_131'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_132'/>
+132
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_132'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_133'/>
+133
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_133'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_134'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_135'/>
+135
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_135'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isEmpty(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_136'/>
+136
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_136'>12</a>
+<span>
+1. isEmpty : removed call to org/example/model/game/arena/Arena::isMonster &rarr; SURVIVED<br/>
+2. isEmpty : removed call to org/example/model/game/arena/Arena::isBomb &rarr; SURVIVED<br/>
+3. isEmpty : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+4. isEmpty : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+5. isEmpty : negated conditional &rarr; KILLED<br/>
+6. isEmpty : negated conditional &rarr; KILLED<br/>
+7. isEmpty : negated conditional &rarr; KILLED<br/>
+8. isEmpty : removed call to org/example/model/game/arena/Arena::isNotWall &rarr; KILLED<br/>
+9. isEmpty : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+10. isEmpty : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+11. isEmpty : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+12. isEmpty : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (isNotWall(position) &#38;&#38; !isMonster(position) &#38;&#38; !isBomb(position))</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_137'/>
+137
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_137'>2</a>
+<span>
+1. isEmpty : Substituted 1 with 0 &rarr; KILLED<br/>
+2. isEmpty : replaced boolean return with false for org/example/model/game/arena/Arena::isEmpty &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_138'/>
+138
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_138'>2</a>
+<span>
+1. isEmpty : Substituted 0 with 1 &rarr; KILLED<br/>
+2. isEmpty : replaced boolean return with true for org/example/model/game/arena/Arena::isEmpty &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_139'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_140'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_141'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_142'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// SCORE ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_143'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Integer score;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_144'/>
+144
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_144'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Integer getScore() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_145'/>
+145
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_145'>1</a>
+<span>
+1. getScore : replaced Integer return value with 0 for org/example/model/game/arena/Arena::getScore &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return this.score;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_146'/>
+146
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_146'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_147'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_148'/>
+148
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_148'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setScore(Integer highScore) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_149'/>
+149
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_149'>1</a>
+<span>
+1. setScore : Removed assignment to member variable score &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.score = highScore;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_150'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_151'/>
+151
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_151'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_152'/>
+152
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_152'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// POWER UPS ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_153'/>
+153
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_153'>2</a>
+<span>
+1. &#60;init&#62; : removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED<br/>
+2. &#60;init&#62; : Removed assignment to member variable powerUps &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private List&#60;PowerUp&#62; powerUps = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_154'/>
+154
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_154'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;PowerUp&#62; getPowerUps() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_155'/>
+155
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_155'>1</a>
+<span>
+1. getPowerUps : replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getPowerUps &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return powerUps;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_156'/>
+156
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_156'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_157'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void addPowerUp(PowerUp powerUp) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_158'/>
+158
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_158'>1</a>
+<span>
+1. addPowerUp : removed call to java/util/List::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.powerUps.add(powerUp);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_159'/>
+159
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_159'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_160'/>
+160
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_160'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_161'/>
+161
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_161'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void generatePowerUp(Position position) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_162'/>
+162
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_162'>1</a>
+<span>
+1. generatePowerUp : removed call to java/util/Random::&#60;init&#62; &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        Random rand = new Random();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_163'/>
+163
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_163'>3</a>
+<span>
+1. generatePowerUp : Substituted 6 with 7 &rarr; SURVIVED<br/>
+2. generatePowerUp : removed call to java/util/Random::nextInt &rarr; SURVIVED<br/>
+3. generatePowerUp : replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        int i = rand.nextInt(6);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_164'/>
+164
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_164'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_165'/>
+165
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_165'>3</a>
+<span>
+1. generatePowerUp : negated conditional &rarr; SURVIVED<br/>
+2. generatePowerUp : removed conditional - replaced equality check with false &rarr; SURVIVED<br/>
+3. generatePowerUp : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if(i == 0){ // 16% of chance of generating a power up</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_166'/>
+166
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_166'>3</a>
+<span>
+1. generatePowerUp : Substituted 4 with 5 &rarr; SURVIVED<br/>
+2. generatePowerUp : removed call to java/util/Random::nextInt &rarr; SURVIVED<br/>
+3. generatePowerUp : replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            int j = rand.nextInt(4);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_167'/>
+167
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_167'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_168'/>
+168
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_168'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            //randomly generate a power up</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_169'/>
+169
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_169'>5</a>
+<span>
+1. generatePowerUp : RemoveSwitch 0 mutation &rarr; SURVIVED<br/>
+2. generatePowerUp : RemoveSwitch 1 mutation &rarr; SURVIVED<br/>
+3. generatePowerUp : RemoveSwitch 2 mutation &rarr; SURVIVED<br/>
+4. generatePowerUp : RemoveSwitch 3 mutation &rarr; SURVIVED<br/>
+5. generatePowerUp : Changed switch default to be first case &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            switch (j){</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_170'/>
+170
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_170'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                case 0:</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_171'/>
+171
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_171'>3</a>
+<span>
+1. generatePowerUp : removed call to org/example/model/game/entities/powerups/HP::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. generatePowerUp : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+3. generatePowerUp : removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                    addPowerUp(new HP(position, 0)); //0 seconds means it stays active for the rest of the game</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_172'/>
+172
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_172'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                    break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_173'/>
+173
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_173'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                case 1:</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_174'/>
+174
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_174'>3</a>
+<span>
+1. generatePowerUp : removed call to org/example/model/game/entities/powerups/Invincibility::&#60;init&#62; &rarr; SURVIVED<br/>
+2. generatePowerUp : Substituted 5 with 6 &rarr; SURVIVED<br/>
+3. generatePowerUp : removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>                    addPowerUp(new Invincibility(position, 5));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_175'/>
+175
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_175'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                    break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_176'/>
+176
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_176'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                case 2:</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_177'/>
+177
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_177'>3</a>
+<span>
+1. generatePowerUp : removed call to org/example/model/game/entities/powerups/BombQuantity::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. generatePowerUp : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+3. generatePowerUp : removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                    addPowerUp(new BombQuantity(position, 0));</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_178'/>
+178
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_178'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                    break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_179'/>
+179
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_179'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                case 3:</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_180'/>
+180
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_180'>3</a>
+<span>
+1. generatePowerUp : removed call to org/example/model/game/entities/powerups/ExplosionRadius::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. generatePowerUp : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+3. generatePowerUp : removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                    addPowerUp(new ExplosionRadius(position, 0));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_181'/>
+181
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_181'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                    break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_182'/>
+182
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_182'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_183'/>
+183
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_183'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_184'/>
+184
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_184'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_185'/>
+185
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_185'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_186'/>
+186
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_186'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_187'/>
+187
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_187'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /////////////////////////// EXIT ///////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_188'/>
+188
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_188'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_189'/>
+189
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_189'>5</a>
+<span>
+1. &#60;init&#62; : Substituted 99 with 100 &rarr; SURVIVED<br/>
+2. &#60;init&#62; : Substituted 99 with 100 &rarr; SURVIVED<br/>
+3. &#60;init&#62; : removed call to org/example/model/Position::&#60;init&#62; &rarr; KILLED<br/>
+4. &#60;init&#62; : removed call to org/example/model/game/entities/Exit::&#60;init&#62; &rarr; KILLED<br/>
+5. &#60;init&#62; : Removed assignment to member variable exit &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    private Exit exit = new Exit(new Position(99,99));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_190'/>
+190
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_190'>2</a>
+<span>
+1. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+2. &#60;init&#62; : Removed assignment to member variable exitAlreadyExists &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    private boolean exitAlreadyExists = false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_191'/>
+191
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_191'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_192'/>
+192
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_192'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void generateExit(Position position){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_193'/>
+193
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_193'>1</a>
+<span>
+1. generateExit : removed call to java/util/Random::&#60;init&#62; &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        Random rand = new Random();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_194'/>
+194
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_194'>3</a>
+<span>
+1. generateExit : Substituted 10 with 11 &rarr; SURVIVED<br/>
+2. generateExit : removed call to java/util/Random::nextInt &rarr; SURVIVED<br/>
+3. generateExit : replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        int i = rand.nextInt(10);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_195'/>
+195
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_195'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_196'/>
+196
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_196'>12</a>
+<span>
+1. generateExit : Substituted 8 with 9 &rarr; SURVIVED<br/>
+2. generateExit : Substituted 1 with 0 &rarr; SURVIVED<br/>
+3. generateExit : negated conditional &rarr; SURVIVED<br/>
+4. generateExit : negated conditional &rarr; SURVIVED<br/>
+5. generateExit : negated conditional &rarr; SURVIVED<br/>
+6. generateExit : removed call to java/util/List::size &rarr; SURVIVED<br/>
+7. generateExit : removed conditional - replaced equality check with false &rarr; SURVIVED<br/>
+8. generateExit : removed conditional - replaced equality check with false &rarr; SURVIVED<br/>
+9. generateExit : removed conditional - replaced equality check with false &rarr; SURVIVED<br/>
+10. generateExit : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+11. generateExit : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+12. generateExit : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if ((i == 8 || breakableWalls.size() == 1) &#38;&#38; !exitAlreadyExists){ // 10% chance</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_197'/>
+197
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_197'>2</a>
+<span>
+1. generateExit : removed call to org/example/model/game/entities/Exit::&#60;init&#62; &rarr; SURVIVED<br/>
+2. generateExit : Removed assignment to member variable exit &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            this.exit = new Exit(position);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_198'/>
+198
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_198'>2</a>
+<span>
+1. generateExit : Substituted 1 with 0 &rarr; SURVIVED<br/>
+2. generateExit : Removed assignment to member variable exitAlreadyExists &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            exitAlreadyExists = true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_199'/>
+199
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_199'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_200'/>
+200
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_200'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_201'/>
+201
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_201'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_202'/>
+202
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_202'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setExit(Exit exit) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_203'/>
+203
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_203'>1</a>
+<span>
+1. setExit : Removed assignment to member variable exit &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.exit = exit;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_204'/>
+204
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_204'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_205'/>
+205
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_205'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_206'/>
+206
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_206'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Exit getExit() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_207'/>
+207
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_207'>1</a>
+<span>
+1. getExit : replaced return value with null for org/example/model/game/arena/Arena::getExit &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return exit;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_208'/>
+208
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_208'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7d43c89f_209'/>
+209
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_209'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaTest]/[method:testWH()]</span></span> Removed assignment to member variable width &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_17'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaTest]/[method:testWH()]</span></span> Removed assignment to member variable height &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getWidth<br/><b>Killed by : </b>org.example.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaTest]/[method:testWH()]</span></span> replaced int return with 0 for org/example/model/game/arena/Arena::getWidth &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getHeight<br/><b>Killed by : </b>org.example.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaTest]/[method:testWH()]</span></span> replaced int return with 0 for org/example/model/game/arena/Arena::getHeight &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBomberman<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:nextAnimation()]</span></span> replaced return value with null for org/example/model/game/arena/Arena::getBomberman &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_39'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setBomberman<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:nextAnimation()]</span></span> Removed assignment to member variable bomberman &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_43'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> Removed assignment to member variable monsters &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getMonsters<br/><b>Killed by : </b>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:ExitClosed()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getMonsters &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setMonsters<br/><b>Killed by : </b>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:ExitClosed()]</span></span> Removed assignment to member variable monsters &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_49'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addMonster<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:MonsterInExplosion()]</span></span> removed call to org/example/model/game/entities/Monster::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>addMonster<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:MonsterInExplosion()]</span></span> removed call to java/util/List::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_53'>53</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_53'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Removed assignment to member variable breakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_56'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBreakableWalls<br/><b>Killed by : </b>org.example.model.game.arena.ArenaBuilderTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaBuilderTest]/[method:createArenaTest()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getBreakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_59'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setBreakableWalls<br/><b>Killed by : </b>org.example.model.game.arena.ArenaBuilderTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaBuilderTest]/[method:createArenaTest()]</span></span> Removed assignment to member variable breakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_63'>63</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_63'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> Removed assignment to member variable unbreakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_65'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getUnbreakableWalls<br/><b>Killed by : </b>org.example.model.game.arena.ArenaBuilderTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaBuilderTest]/[method:createArenaTest()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getUnbreakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_68'>68</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_68'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setUnbreakableWalls<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> Removed assignment to member variable unbreakableWalls &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_72'>72</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_72'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:placeBomb()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:placeBomb()]</span></span> Removed assignment to member variable bombs &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_73'>73</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_73'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBombs<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:placeBomb()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getBombs &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_76'>76</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_76'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:placeBomb()]</span></span> removed call to java/util/List::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_80'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> Removed assignment to member variable explosions &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_82'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getExplosions<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getExplosions &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> removed call to java/util/List::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> removed call to org/example/model/game/arena/Arena::isUWall &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_92'>92</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_92'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to org/example/model/game/arena/Arena::isBWall &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_94'>94</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_94'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isNotWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isNotWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_99'>99</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_99'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> removed call to org/example/model/game/entities/UnbreakableWall::getPosition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> removed call to org/example/model/Position::equals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_100'>100</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_100'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isUWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_103'>103</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_103'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isUWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isUWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_107'>107</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_107'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionOneGapLargerRadius()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to org/example/model/game/entities/BreakableWall::getPosition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to org/example/model/Position::equals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionOneGapLargerRadius()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_108'>108</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_108'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isBWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_109'>109</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_109'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBWall<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isBWall &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_113'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> removed call to org/example/model/game/entities/Monster::getPosition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> removed call to org/example/model/Position::equals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_114'>114</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_114'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isMonster &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_115'>115</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_115'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isMonster<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isMonster &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_120'>120</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_120'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> removed call to org/example/model/game/entities/Bomb::getPosition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> removed call to org/example/model/Position::equals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_121'>121</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_121'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isBomb &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_123'>123</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_123'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isBomb<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isBomb &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_128'>128</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_128'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> removed call to org/example/model/game/entities/Explosion::getPosition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> removed call to org/example/model/Position::equals &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isExplosion &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_129'>129</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_129'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isExplosion<br/><b>Killed by : </b>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isExplosion &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_136'>136</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_136'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterEnclosed()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> removed call to org/example/model/game/arena/Arena::isNotWall &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::isMonster &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::isBomb &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterEnclosed()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_137'>137</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_137'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()]</span></span> replaced boolean return with false for org/example/model/game/arena/Arena::isEmpty &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_138'>138</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_138'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterEnclosed()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isEmpty<br/><b>Killed by : </b>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterEnclosed()]</span></span> replaced boolean return with true for org/example/model/game/arena/Arena::isEmpty &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_145'>145</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_145'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getScore<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:MonsterInExplosion()]</span></span> replaced Integer return value with 0 for org/example/model/game/arena/Arena::getScore &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_149'>149</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_149'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setScore<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:MonsterInExplosion()]</span></span> Removed assignment to member variable score &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_153'>153</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_153'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> removed call to java/util/ArrayList::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> Removed assignment to member variable powerUps &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_155'>155</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_155'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPowerUps<br/><b>Killed by : </b>org.example.controller.game.PowerUpControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.PowerUpControllerTest]/[method:testAnimation()]</span></span> replaced return value with Collections.emptyList for org/example/model/game/arena/Arena::getPowerUps &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_158'>158</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_158'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>addPowerUp<br/><b>Killed by : </b>org.example.controller.game.PowerUpControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.PowerUpControllerTest]/[method:testAnimation()]</span></span> removed call to java/util/List::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_162'>162</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_162'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to java/util/Random::&#60;init&#62; &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_163'>163</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_163'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 6 with 7 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to java/util/Random::nextInt &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_165'>165</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_165'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_166'>166</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_166'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 4 with 5 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to java/util/Random::nextInt &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_169'>169</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_169'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> RemoveSwitch 0 mutation &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> RemoveSwitch 1 mutation &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> RemoveSwitch 2 mutation &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> RemoveSwitch 3 mutation &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Changed switch default to be first case &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_171'>171</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_171'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/entities/powerups/HP::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_174'>174</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_174'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/entities/powerups/Invincibility::&#60;init&#62; &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 5 with 6 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_177'>177</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_177'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/entities/powerups/BombQuantity::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_180'>180</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_180'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/entities/powerups/ExplosionRadius::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generatePowerUp<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/arena/Arena::addPowerUp &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_189'>189</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_189'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> removed call to org/example/model/Position::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> removed call to org/example/model/game/entities/Exit::&#60;init&#62; &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 99 with 100 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 99 with 100 &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> Removed assignment to member variable exit &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_190'>190</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_190'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable exitAlreadyExists &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_193'>193</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_193'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()]</span></span> removed call to java/util/Random::&#60;init&#62; &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_194'>194</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_194'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Substituted 10 with 11 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed call to java/util/Random::nextInt &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Random::nextInt with argument &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_196'>196</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_196'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Substituted 8 with 9 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::size &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_197'>197</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_197'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> removed call to org/example/model/game/entities/Exit::&#60;init&#62; &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable exit &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_198'>198</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_198'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>generateExit<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable exitAlreadyExists &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_203'>203</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_203'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setExit<br/><b>Killed by : </b>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:NewState()]</span></span> Removed assignment to member variable exit &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7d43c89f_207'>207</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7d43c89f_207'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getExit<br/><b>Killed by : </b>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()]</span></span> replaced return value with null for org/example/model/game/arena/Arena::getExit &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>CONSTRUCTOR_CALLS</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>EXPERIMENTAL_ARGUMENT_PROPAGATION</li>
+<li class='mutator'>EXPERIMENTAL_BIG_DECIMAL</li>
+<li class='mutator'>EXPERIMENTAL_BIG_INTEGER</li>
+<li class='mutator'>EXPERIMENTAL_MEMBER_VARIABLE</li>
+<li class='mutator'>EXPERIMENTAL_NAKED_RECEIVER</li>
+<li class='mutator'>EXPERIMENTAL_REMOVE_SWITCH_MUTATOR_[0-99]</li>
+<li class='mutator'>EXPERIMENTAL_SWITCH</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INLINE_CONSTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NON_VOID_METHOD_CALLS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF</li>
+<li class='mutator'>REMOVE_INCREMENTS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:up()] (1 ms)</li><li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:quit()] (3 ms)</li><li>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:testAnimation()] (1 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionOneGapLargerRadius()] (1 ms)</li><li>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:AnotherBombInExplosion()] (0 ms)</li><li>org.example.controller.game.PowerUpControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.PowerUpControllerTest]/[method:BombermanCatchesPowerUP()] (0 ms)</li><li>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:NewState()] (299 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanLeftNotEmpty()] (1 ms)</li><li>org.example.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ArenaControllerTest]/[method:normalStep()] (4 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:animationBWall()] (1 ms)</li><li>org.example.controller.game.PowerUpControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.PowerUpControllerTest]/[method:testDuration()] (0 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveToMonsterTest()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isBomb()] (1 ms)</li><li>org.example.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaTest]/[method:testWH()] (1 ms)</li><li>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:MonsterInExplosion()] (1 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionSurroundedWithBWalls()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:placeBomb()] (1 ms)</li><li>org.example.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ArenaControllerTest]/[method:ifBombermanDied()] (299 ms)</li><li>org.example.viewer.GameViewerTest.[engine:junit-jupiter]/[class:org.example.viewer.GameViewerTest]/[method:drawElements()] (133 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownNotEmpty()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanUpNotEmpty()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightEmpty()] (1 ms)</li><li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:selectQuit()] (44 ms)</li><li>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:ExitOpen()] (2 ms)</li><li>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterGap()] (2 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanDownEmpty()] (0 ms)</li><li>org.example.controller.game.ExitControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExitControllerTest]/[method:ExitClosed()] (2 ms)</li><li>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsters()] (2 ms)</li><li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:selectRestart()] (36 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:step()] (6 ms)</li><li>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:BombermanInExplosion()] (0 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:nextAnimation()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanLeftEmpty()] (1 ms)</li><li>org.example.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.MenuControllerTest]/[method:selectStart()] (64 ms)</li><li>org.example.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ArenaControllerTest]/[method:ifPlayerQuit()] (204 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:isExplosion()] (1 ms)</li><li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:selectResume()] (3 ms)</li><li>org.example.controller.menu.PauseMenuControllerTest.[engine:junit-jupiter]/[class:org.example.controller.menu.PauseMenuControllerTest]/[method:down()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:testAnimation()] (1 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:animationEnd()] (1 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanUpEmpty()] (1 ms)</li><li>org.example.controller.game.PowerUpControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.PowerUpControllerTest]/[method:testAnimation()] (1 ms)</li><li>org.example.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.MonsterControllerTest]/[method:moveMonsterEnclosed()] (1 ms)</li><li>org.example.controller.game.BombControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombControllerTest]/[method:explosionOneGap()] (2 ms)</li><li>org.example.controller.game.BombermanControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.BombermanControllerTest]/[method:moveBombermanRightNotEmpty()] (0 ms)</li><li>org.example.controller.game.ExplosionControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ExplosionControllerTest]/[method:PowerUpInExplosion()] (0 ms)</li><li>org.example.model.game.arena.ArenaBuilderTest.[engine:junit-jupiter]/[class:org.example.model.game.arena.ArenaBuilderTest]/[method:createArenaTest()] (1 ms)</li><li>org.example.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:org.example.controller.game.ArenaControllerTest]/[method:HighScore()] (24 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.9.4
+
+</body>
+</html>

@@ -1,0 +1,3370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>LanternaGUI.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.example.gui;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.TerminalSize;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.TerminalPosition;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.TextColor;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.graphics.TextGraphics;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.input.KeyStroke;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.input.KeyType;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.screen.Screen;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.screen.TerminalScreen;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.terminal.DefaultTerminalFactory;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.terminal.Terminal;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.example.model.Position;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.awt.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.File;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.URISyntaxException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.URL;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class LanternaGUI implements GUI {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Screen screen;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_25'/>
+25
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_25'>2</a>
+<span>
+1. &#60;init&#62; : Removed assignment to member variable backgroundColor &rarr; NO_COVERAGE<br/>
+2. &#60;init&#62; : Removed assignment to member variable backgroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    private String backgroundColor = &#34;#149300&#34;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public LanternaGUI(Screen screen) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_28'/>
+28
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_28'>1</a>
+<span>
+1. &#60;init&#62; : Removed assignment to member variable screen &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.screen = screen;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    public LanternaGUI(int width, int height) throws URISyntaxException, FontFormatException, IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_32'/>
+32
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_32'>1</a>
+<span>
+1. &#60;init&#62; : removed call to org/example/gui/LanternaGUI::loadSquareFont &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        AWTTerminalFontConfiguration fontConfig = loadSquareFont();</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_33'/>
+33
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_33'>1</a>
+<span>
+1. &#60;init&#62; : removed call to org/example/gui/LanternaGUI::createTerminal &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        Terminal terminal = createTerminal(width, height, fontConfig);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_34'/>
+34
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_34'>2</a>
+<span>
+1. &#60;init&#62; : removed call to org/example/gui/LanternaGUI::createScreen &rarr; NO_COVERAGE<br/>
+2. &#60;init&#62; : Removed assignment to member variable screen &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        this.screen = createScreen(terminal);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontconfig) throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_38'/>
+38
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_38'>1</a>
+<span>
+1. createTerminal : removed call to com/googlecode/lanterna/TerminalSize::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        TerminalSize size = new TerminalSize(width, height);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_39'/>
+39
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_39'>3</a>
+<span>
+1. createTerminal : removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. createTerminal : removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setInitialTerminalSize &rarr; NO_COVERAGE<br/>
+3. createTerminal : replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setInitialTerminalSize with receiver &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(size);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_40'/>
+40
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_40'>3</a>
+<span>
+1. createTerminal : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+2. createTerminal : removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setForceAWTOverSwing &rarr; NO_COVERAGE<br/>
+3. createTerminal : replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setForceAWTOverSwing with receiver &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        terminalFactory.setForceAWTOverSwing(true);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_41'/>
+41
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_41'>2</a>
+<span>
+1. createTerminal : removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setTerminalEmulatorFontConfiguration &rarr; NO_COVERAGE<br/>
+2. createTerminal : replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setTerminalEmulatorFontConfiguration with receiver &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        terminalFactory.setTerminalEmulatorFontConfiguration(fontconfig);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_42'/>
+42
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_42'>1</a>
+<span>
+1. createTerminal : removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::createTerminal &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        Terminal terminal = terminalFactory.createTerminal();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_44'/>
+44
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_44'>1</a>
+<span>
+1. createTerminal : replaced return value with null for org/example/gui/LanternaGUI::createTerminal &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return terminal;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Screen createScreen(Terminal terminal) throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_48'/>
+48
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_48'>2</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/screen/TerminalScreen::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. createScreen : Removed assignment to member variable screen &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        screen = new TerminalScreen(terminal);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_49'/>
+49
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_49'>1</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/screen/Screen::setCursorPosition &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        screen.setCursorPosition(null);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_50'/>
+50
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_50'>1</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/screen/Screen::doResizeIfNecessary &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        screen.doResizeIfNecessary();</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_51'/>
+51
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_51'>1</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/screen/Screen::startScreen &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        screen.startScreen();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_53'/>
+53
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_53'>1</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        TextGraphics graphics = screen.newTextGraphics();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_55'/>
+55
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_55'>2</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; NO_COVERAGE<br/>
+2. createScreen : removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        graphics.setBackgroundColor(TextColor.Factory.fromString(this.backgroundColor));</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_56'/>
+56
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_56'>7</a>
+<span>
+1. createScreen : removed call to com/googlecode/lanterna/TerminalPosition::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. createScreen : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+3. createScreen : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+4. createScreen : Substituted 32 with 33 &rarr; NO_COVERAGE<br/>
+5. createScreen : removed call to com/googlecode/lanterna/terminal/Terminal::getTerminalSize &rarr; NO_COVERAGE<br/>
+6. createScreen : removed call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle &rarr; NO_COVERAGE<br/>
+7. createScreen : replaced call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle with receiver &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        graphics.fillRectangle(new TerminalPosition(0, 0), terminal.getTerminalSize(), &#39; &#39;);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_57'/>
+57
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_57'>1</a>
+<span>
+1. createScreen : replaced return value with null for org/example/gui/LanternaGUI::createScreen &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return screen;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private AWTTerminalFontConfiguration loadSquareFont() throws URISyntaxException, FontFormatException, IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_61'/>
+61
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_61'>3</a>
+<span>
+1. loadSquareFont : removed call to java/lang/Object::getClass &rarr; NO_COVERAGE<br/>
+2. loadSquareFont : removed call to java/lang/Class::getClassLoader &rarr; NO_COVERAGE<br/>
+3. loadSquareFont : removed call to java/lang/ClassLoader::getResource &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        URL resource = getClass().getClassLoader().getResource(&#34;fonts/Kitchen Sink.ttf&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_62'/>
+62
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_62'>2</a>
+<span>
+1. loadSquareFont : removed call to java/io/File::&#60;init&#62; &rarr; NO_COVERAGE<br/>
+2. loadSquareFont : removed call to java/net/URL::toURI &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        File fontFile = new File(resource.toURI());</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_63'/>
+63
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_63'>2</a>
+<span>
+1. loadSquareFont : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. loadSquareFont : removed call to java/awt/Font::createFont &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_65'/>
+65
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_65'>1</a>
+<span>
+1. loadSquareFont : removed call to java/awt/GraphicsEnvironment::getLocalGraphicsEnvironment &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_66'/>
+66
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_66'>1</a>
+<span>
+1. loadSquareFont : removed call to java/awt/GraphicsEnvironment::registerFont &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        ge.registerFont(font);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_68'/>
+68
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_68'>4</a>
+<span>
+1. loadSquareFont : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+2. loadSquareFont : Substituted 60.0 with 1.0 &rarr; NO_COVERAGE<br/>
+3. loadSquareFont : removed call to java/awt/Font::deriveFont &rarr; NO_COVERAGE<br/>
+4. loadSquareFont : replaced call to java/awt/Font::deriveFont with receiver &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        Font loadedFont = font.deriveFont(Font.PLAIN, 60);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_69'/>
+69
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_69'>3</a>
+<span>
+1. loadSquareFont : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+2. loadSquareFont : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+3. loadSquareFont : removed call to com/googlecode/lanterna/terminal/swing/AWTTerminalFontConfiguration::newInstance &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        AWTTerminalFontConfiguration fontConfig = AWTTerminalFontConfiguration.newInstance(loadedFont);</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_70'/>
+70
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_70'>1</a>
+<span>
+1. loadSquareFont : replaced return value with null for org/example/gui/LanternaGUI::loadSquareFont &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return fontConfig;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void refresh() throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_75'/>
+75
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_75'>1</a>
+<span>
+1. refresh : removed call to com/googlecode/lanterna/screen/Screen::refresh &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        screen.refresh();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void close() throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_80'/>
+80
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_80'>1</a>
+<span>
+1. close : removed call to com/googlecode/lanterna/screen/Screen::close &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        screen.close();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_84'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public ACTION getNextAction() throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_85'/>
+85
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_85'>1</a>
+<span>
+1. getNextAction : removed call to com/googlecode/lanterna/screen/Screen::pollInput &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        KeyStroke keyStroke = screen.pollInput();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_86'/>
+86
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_86'>4</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+4. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke == null) return ACTION.NONE;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_88'/>
+88
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_88'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.EOF) return ACTION.QUIT;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_89'/>
+89
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_89'>11</a>
+<span>
+1. getNextAction : Substituted 113 with 114 &rarr; KILLED<br/>
+2. getNextAction : negated conditional &rarr; KILLED<br/>
+3. getNextAction : negated conditional &rarr; KILLED<br/>
+4. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+5. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getCharacter &rarr; KILLED<br/>
+6. getNextAction : removed call to java/lang/Character::charValue &rarr; KILLED<br/>
+7. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+8. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+9. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+10. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+11. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.Character &#38;&#38; keyStroke.getCharacter() == &#39;q&#39;) return ACTION.QUIT;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_90'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.Escape) return ACTION.QUIT;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_92'/>
+92
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_92'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.ArrowUp) return ACTION.UP;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_93'/>
+93
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_93'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.ArrowRight) return ACTION.RIGHT;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_94'/>
+94
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_94'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.ArrowDown) return ACTION.DOWN;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_95'/>
+95
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_95'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.ArrowLeft) return ACTION.LEFT;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_97'/>
+97
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_97'>5</a>
+<span>
+1. getNextAction : negated conditional &rarr; KILLED<br/>
+2. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+3. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+4. getNextAction : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+5. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (keyStroke.getKeyType() == KeyType.Enter) return ACTION.SELECT;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_98'/>
+98
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_98'>11</a>
+<span>
+1. getNextAction : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+2. getNextAction : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+3. getNextAction : Substituted 32 with 33 &rarr; KILLED<br/>
+4. getNextAction : negated conditional &rarr; KILLED<br/>
+5. getNextAction : negated conditional &rarr; KILLED<br/>
+6. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED<br/>
+7. getNextAction : removed call to com/googlecode/lanterna/input/KeyStroke::getCharacter &rarr; KILLED<br/>
+8. getNextAction : removed call to java/lang/Character::charValue &rarr; KILLED<br/>
+9. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+10. getNextAction : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+11. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (keyStroke.getKeyType() == KeyType.Character &#38;&#38; keyStroke.getCharacter() == &#39; &#39;) return ACTION.SPACE;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_99'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_100'/>
+100
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_100'>1</a>
+<span>
+1. getNextAction : replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return ACTION.NONE;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_102'/>
+102
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_102'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void clear() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_105'/>
+105
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_105'>1</a>
+<span>
+1. clear : removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        TextGraphics graphics = screen.newTextGraphics();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_106'/>
+106
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_106'>2</a>
+<span>
+1. clear : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED<br/>
+2. clear : removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.setBackgroundColor(TextColor.Factory.fromString(this.backgroundColor));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_107'/>
+107
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_107'>9</a>
+<span>
+1. clear : removed call to com/googlecode/lanterna/TerminalPosition::&#60;init&#62; &rarr; KILLED<br/>
+2. clear : removed call to com/googlecode/lanterna/TerminalSize::&#60;init&#62; &rarr; KILLED<br/>
+3. clear : Substituted 0 with 1 &rarr; KILLED<br/>
+4. clear : Substituted 0 with 1 &rarr; KILLED<br/>
+5. clear : Substituted 15 with 16 &rarr; KILLED<br/>
+6. clear : Substituted 16 with 17 &rarr; KILLED<br/>
+7. clear : Substituted 32 with 33 &rarr; KILLED<br/>
+8. clear : removed call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle &rarr; KILLED<br/>
+9. clear : replaced call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle with receiver &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(15, 16), &#39; &#39;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_108'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_109'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_110'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private void drawCharacter(int x, int y, char c, String color, String backgroundColor) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_111'/>
+111
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_111'>1</a>
+<span>
+1. drawCharacter : removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        TextGraphics graphics = screen.newTextGraphics();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_112'/>
+112
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_112'>2</a>
+<span>
+1. drawCharacter : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED<br/>
+2. drawCharacter : removed call to com/googlecode/lanterna/graphics/TextGraphics::setForegroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.setForegroundColor(TextColor.Factory.fromString(color));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_113'/>
+113
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_113'>2</a>
+<span>
+1. drawCharacter : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED<br/>
+2. drawCharacter : removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.setBackgroundColor(TextColor.Factory.fromString(backgroundColor));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_114'/>
+114
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_114'>3</a>
+<span>
+1. drawCharacter : Substituted 1 with 0 &rarr; KILLED<br/>
+2. drawCharacter : removed call to com/googlecode/lanterna/graphics/TextGraphics::putString &rarr; KILLED<br/>
+3. drawCharacter : replaced call to com/googlecode/lanterna/graphics/TextGraphics::putString with receiver &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.putString(x, y + 1, &#34;&#34; + c);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_115'/>
+115
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_115'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_117'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    //////////////////////////////// GUI IMPLEMENTATIONS ////////////////////////////////</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_118'/>
+118
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_118'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_119'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawPowerUp(Position position, char animation, String color) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_120'/>
+120
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_120'>3</a>
+<span>
+1. drawPowerUp : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawPowerUp : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawPowerUp : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(position.getX(), position.getY(), animation, color, this.backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_121'/>
+121
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_121'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_122'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_123'/>
+123
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_123'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_124'/>
+124
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_124'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawBomberman(Position pos, char c, String color) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_125'/>
+125
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_125'>3</a>
+<span>
+1. drawBomberman : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawBomberman : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawBomberman : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), c, color, this.backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_126'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_127'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_128'/>
+128
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_128'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_129'/>
+129
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_129'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawBomb(Position pos) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_130'/>
+130
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_130'>4</a>
+<span>
+1. drawBomb : Substituted 7742 with 7743 &rarr; KILLED<br/>
+2. drawBomb : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+3. drawBomb : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+4. drawBomb : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), &#39;&#7742;&#39;, &#34;#121111&#34;, this.backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_131'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_132'/>
+132
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_132'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_133'/>
+133
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_133'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_134'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawBreakableWall(Position pos, char animation, String color, String backgroundColor) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_135'/>
+135
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_135'>3</a>
+<span>
+1. drawBreakableWall : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawBreakableWall : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawBreakableWall : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), animation, color, backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_136'/>
+136
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_136'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_137'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_138'/>
+138
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_138'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_139'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawExplosion(Position pos, char animation, String color) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_140'/>
+140
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_140'>3</a>
+<span>
+1. drawExplosion : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawExplosion : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawExplosion : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(),animation ,color, this.backgroundColor); }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_141'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_142'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_143'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawMonster(Position pos, char c, String color) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_144'/>
+144
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_144'>3</a>
+<span>
+1. drawMonster : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawMonster : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawMonster : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), c, color, this.backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_145'/>
+145
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_145'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_146'/>
+146
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_146'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_147'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_148'/>
+148
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_148'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawUnbreakableWall(Position pos) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_149'/>
+149
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_149'>4</a>
+<span>
+1. drawUnbreakableWall : Substituted 7771 with 7772 &rarr; KILLED<br/>
+2. drawUnbreakableWall : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+3. drawUnbreakableWall : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+4. drawUnbreakableWall : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), &#39;&#7771;&#39;, &#34;#3e403f&#34;, &#34;#939795&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_150'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_151'/>
+151
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_151'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_152'/>
+152
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_152'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_153'/>
+153
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_153'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawExit(Position pos, String color) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_154'/>
+154
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_154'>4</a>
+<span>
+1. drawExit : Substituted 9633 with 9634 &rarr; KILLED<br/>
+2. drawExit : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+3. drawExit : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+4. drawExit : removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        drawCharacter(pos.getX(), pos.getY(), &#39;&#9633;&#39;, color, this.backgroundColor);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_155'/>
+155
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_155'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_156'/>
+156
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_156'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_157'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_158'/>
+158
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_158'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_159'/>
+159
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_159'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void drawText(Position position, String string, String color){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_160'/>
+160
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_160'>1</a>
+<span>
+1. drawText : removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        TextGraphics graphics = screen.newTextGraphics();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_161'/>
+161
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_161'>2</a>
+<span>
+1. drawText : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED<br/>
+2. drawText : removed call to com/googlecode/lanterna/graphics/TextGraphics::setForegroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.setForegroundColor(TextColor.Factory.fromString(color));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_162'/>
+162
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_162'>2</a>
+<span>
+1. drawText : removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED<br/>
+2. drawText : removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.setBackgroundColor(TextColor.Factory.fromString(this.backgroundColor));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_163'/>
+163
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_163'>4</a>
+<span>
+1. drawText : removed call to org/example/model/Position::getX &rarr; KILLED<br/>
+2. drawText : removed call to org/example/model/Position::getY &rarr; KILLED<br/>
+3. drawText : removed call to com/googlecode/lanterna/graphics/TextGraphics::putString &rarr; KILLED<br/>
+4. drawText : replaced call to com/googlecode/lanterna/graphics/TextGraphics::putString with receiver &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        graphics.putString(position.getX(), position.getY(), string);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_164'/>
+164
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_164'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@57330423_165'/>
+165
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@57330423_165'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_25'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable backgroundColor &rarr; NO_COVERAGE</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawPowerUp()]</span></span> Removed assignment to member variable backgroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:close()]</span></span> Removed assignment to member variable screen &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_32'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/example/gui/LanternaGUI::loadSquareFont &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_33'>33</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_33'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/example/gui/LanternaGUI::createTerminal &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_34'>34</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_34'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/example/gui/LanternaGUI::createScreen &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable screen &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_38'>38</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_38'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/TerminalSize::&#60;init&#62; &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_39'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setInitialTerminalSize &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setInitialTerminalSize with receiver &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_40'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setForceAWTOverSwing &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setForceAWTOverSwing with receiver &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_41'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setTerminalEmulatorFontConfiguration &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> replaced call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::setTerminalEmulatorFontConfiguration with receiver &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_42'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/DefaultTerminalFactory::createTerminal &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_44'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createTerminal<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/example/gui/LanternaGUI::createTerminal &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_48'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/screen/TerminalScreen::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> Removed assignment to member variable screen &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_49'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/screen/Screen::setCursorPosition &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_50'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/screen/Screen::doResizeIfNecessary &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_51'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/screen/Screen::startScreen &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_53'>53</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_53'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_55'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_56'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/TerminalPosition::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> Substituted 32 with 33 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/Terminal::getTerminalSize &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> replaced call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle with receiver &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_57'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createScreen<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/example/gui/LanternaGUI::createScreen &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_61'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/lang/Object::getClass &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/lang/Class::getClassLoader &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/lang/ClassLoader::getResource &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_62'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/io/File::&#60;init&#62; &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/net/URL::toURI &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_63'>63</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_63'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/awt/Font::createFont &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_65'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/awt/GraphicsEnvironment::getLocalGraphicsEnvironment &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_66'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/awt/GraphicsEnvironment::registerFont &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_68'>68</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_68'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> Substituted 60.0 with 1.0 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to java/awt/Font::deriveFont &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> replaced call to java/awt/Font::deriveFont with receiver &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_69'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> removed call to com/googlecode/lanterna/terminal/swing/AWTTerminalFontConfiguration::newInstance &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_70'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>loadSquareFont<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/example/gui/LanternaGUI::loadSquareFont &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_75'>75</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_75'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>refresh<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:refresh()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::refresh &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_80'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>close<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:close()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::close &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_85'>85</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_85'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::pollInput &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_86'>86</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_86'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_88'>88</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_88'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_89'>89</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_89'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> Substituted 113 with 114 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getCharacter &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to java/lang/Character::charValue &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_92'>92</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_92'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_93'>93</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_93'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_94'>94</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_94'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_95'>95</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_95'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_97'>97</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_97'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_98'>98</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_98'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> Substituted 32 with 33 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getKeyType &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to com/googlecode/lanterna/input/KeyStroke::getCharacter &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed call to java/lang/Character::charValue &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()]</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_100'>100</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_100'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNextAction<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/example/gui/LanternaGUI::getNextAction &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_105'>105</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_105'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_106'>106</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_106'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_107'>107</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_107'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/TerminalPosition::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/TerminalSize::&#60;init&#62; &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> Substituted 0 with 1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> Substituted 15 with 16 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> Substituted 16 with 17 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> Substituted 32 with 33 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle &rarr; KILLED</p> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>clear<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()]</span></span> replaced call to com/googlecode/lanterna/graphics/TextGraphics::fillRectangle with receiver &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_111'>111</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_111'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_112'>112</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_112'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setForegroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_113'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_114'>114</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_114'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> Substituted 1 with 0 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::putString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawCharacter<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> replaced call to com/googlecode/lanterna/graphics/TextGraphics::putString with receiver &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_120'>120</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_120'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawPowerUp<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawPowerUp()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawPowerUp<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawPowerUp()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawPowerUp<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawPowerUp()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_125'>125</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_125'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawBomberman<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawBomberman<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawBomberman<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_130'>130</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_130'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawBomb<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomb()]</span></span> Substituted 7742 with 7743 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawBomb<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomb()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawBomb<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomb()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawBomb<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomb()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_135'>135</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_135'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawBreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBreakableWall()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawBreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBreakableWall()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawBreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBreakableWall()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_140'>140</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_140'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawExplosion<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExplosion()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawExplosion<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExplosion()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawExplosion<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExplosion()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_144'>144</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_144'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawMonster<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawMonster()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawMonster<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawMonster()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawMonster<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawMonster()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_149'>149</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_149'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawUnbreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawUnbreakableWall()]</span></span> Substituted 7771 with 7772 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawUnbreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawUnbreakableWall()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawUnbreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawUnbreakableWall()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawUnbreakableWall<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawUnbreakableWall()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_154'>154</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_154'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawExit<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExit()]</span></span> Substituted 9633 with 9634 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawExit<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExit()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawExit<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExit()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawExit<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExit()]</span></span> removed call to org/example/gui/LanternaGUI::drawCharacter &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_160'>160</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_160'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/screen/Screen::newTextGraphics &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_161'>161</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_161'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setForegroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_162'>162</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_162'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/TextColor$Factory::fromString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::setBackgroundColor &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@57330423_163'>163</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@57330423_163'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to org/example/model/Position::getX &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to org/example/model/Position::getY &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> removed call to com/googlecode/lanterna/graphics/TextGraphics::putString &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawText<br/><b>Killed by : </b>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()]</span></span> replaced call to com/googlecode/lanterna/graphics/TextGraphics::putString with receiver &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>CONSTRUCTOR_CALLS</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>EXPERIMENTAL_ARGUMENT_PROPAGATION</li>
+<li class='mutator'>EXPERIMENTAL_BIG_DECIMAL</li>
+<li class='mutator'>EXPERIMENTAL_BIG_INTEGER</li>
+<li class='mutator'>EXPERIMENTAL_MEMBER_VARIABLE</li>
+<li class='mutator'>EXPERIMENTAL_NAKED_RECEIVER</li>
+<li class='mutator'>EXPERIMENTAL_REMOVE_SWITCH_MUTATOR_[0-99]</li>
+<li class='mutator'>EXPERIMENTAL_SWITCH</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INLINE_CONSTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NON_VOID_METHOD_CALLS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF</li>
+<li class='mutator'>REMOVE_INCREMENTS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:testActions()] (4 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawPowerUp()] (1 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:close()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExplosion()] (3 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomb()] (1 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:clear()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBreakableWall()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawExit()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawMonster()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawText()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawBomberman()] (1 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:refresh()] (2 ms)</li><li>org.example.gui.LanternaGUITest.[engine:junit-jupiter]/[class:org.example.gui.LanternaGUITest]/[method:drawUnbreakableWall()] (91 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.9.4
+
+</body>
+</html>
